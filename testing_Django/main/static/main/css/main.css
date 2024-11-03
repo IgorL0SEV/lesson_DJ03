@@ -1,0 +1,30 @@
+        aside {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        aside img {
+            border-radius: 50%;
+        }
+        aside span {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        aside ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        aside ul li {
+            margin: 10px 0;
+        }
+        aside ul li a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        aside ul li a:hover {
+            text-decoration: underline;
+        }
