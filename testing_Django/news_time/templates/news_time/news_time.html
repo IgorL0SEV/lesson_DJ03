@@ -1,0 +1,23 @@
+{% extends 'main/layoute.html' %}
+
+{% block title %}
+    <title>NEWS_TIME страница сайта на Django</title>
+{% endblock %}
+
+{% block content %}
+<h3><strong>Добро пожаловать на страницу НОВОСТИ сайта на Django{{caption}}!</strong></h3>
+<br>
+
+{% for new in news %}
+	<div>
+		<h4 style="color: darkblue;"><strong> {{ new.title }} </strong></h4>
+		<p style="color: darkblue;"> {{ new.author }} </p>
+		<p> {{ new.pub_date }} </p>
+		<h5> {{ new.short_description }} </h5>
+        <p> {{ new.text }} </p>
+		<br>
+	</div>
+{% endfor %}
+
+
+{% endblock %}
