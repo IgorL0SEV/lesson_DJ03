@@ -1,0 +1,40 @@
+{% extends 'main/layoute.html' %}
+
+{% block title %}
+    <title>СТРАНИЦА НОВОЙ НОВОСТИ</title>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h3 class="text-center text-primary mb-4"><strong>Страница добавления НОВОСТИ на сайт {{ caption }}!</strong></h3>
+
+    <div class="card shadow p-4">
+        <h4 class="text-center text-darkblue mb-4"><strong>Форма для добавления новостей</strong></h4>
+
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="title" class="form-label">Заголовок новости</label>
+                <input type="text" id="title" class="form-control" placeholder="Введите заголовок новости" required>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Краткое описание новости</label>
+                <input type="text" id="description" class="form-control" placeholder="Введите краткое описание новости" required>
+            </div>
+            <div class="mb-3">
+                <label for="content" class="form-label">Содержание новости</label>
+                <textarea id="content" class="form-control" placeholder="Введите содержание новости" rows="4" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="date" class="form-label">Дата</label>
+                <input type="date" id="date" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="time" class="form-label">Время</label>
+                <input type="time" id="time" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Добавить новость</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
