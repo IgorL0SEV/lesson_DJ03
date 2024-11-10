@@ -15,32 +15,21 @@
         <form method="post">
             {% csrf_token %}
             <div class="mb-3">
-                <label for="title" class="form-label">Заголовок новости</label>
-                <input type="text" id="title" class="form-control" placeholder="Введите заголовок новости" required>
                 {{ form.title }}
             </div>
             <div class="mb-3">
-                <label for="description" class="form-label">Краткое описание новости</label>
-                <input type="text" id="description" class="form-control" placeholder="Введите краткое описание новости" required>
                 {{ form.short_description }}
             </div>
             <div class="mb-3">
-                <label for="content" class="form-label">Содержание новости</label>
-                <textarea id="content" class="form-control" placeholder="Введите содержание новости" rows="4" required></textarea>
                 {{ form.text }}
             </div>
             <div class="mb-3">
-                <label for="date" class="form-label">Дата</label>
-                <input type="date" id="date" class="form-control" required>
                 {{ form.pub_date }}
             </div>
-            <div class="mb-3">
-                <label for="time" class="form-label">Время</label>
-                <input type="time" id="time" class="form-control" required>
 
-            </div>
             <button type="submit" class="btn btn-primary w-100">Добавить новость</button>
         </form>
+        <p>{{error}}</p>
     </div>
 </div>
 {% endblock %}
